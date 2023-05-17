@@ -235,3 +235,62 @@ int main() {
 ```
 
 #### Bahasa Pemrograman : Pascal
+
+```pascal
+uses crt;
+var
+DATA : array[1..2,1..10] of integer;
+sigma : array[1..4] of integer;
+n,m,i,j : integer;
+a,b : real;
+begin
+clrscr;
+Gotoxy(26,1); Writeln('INPUT ENTRI-ENTRI DATA');
+Gotoxy(5,3);Write('Jumlah DATA <<Maks 10>>: ');
+repeat gotoxy(40,3);clreol; readln(m);
+until (m>0) and (m<=10);
+writeln;
+For i := 1 to 2 do
+begin
+Writeln('Input Data ', chr(87+i), ' : ');
+For j := 1 to m do
+Begin
+write('data ', j,' : ');readln(data[i,j]);
+end;
+writeln;
+end;
+i := 1;
+// sigma[1] = sigma(x), sigma[2] = sigma(y), sigma(3) = sigma(xy), sigma(4) = sigma(x^2)
+while(i <=4) do
+begin
+if (i = 4) then
+begin
+for j := 1 to m do
+begin
+sigma[i] := sigma[i] + data[1,j] + data[2,j];
+end;
+end
+else
+begin
+if(i=3) then
+begin
+sigma[i] := sigma[i] + sqr(data[1,j]);
+end
+else
+begin
+for j := 1 to m do
+begin
+sigma[i] := sigma[i] + data[i,j];
+end;
+end
+end;
+i := i + 1;
+end;
+a := ((sigma[2]*sigma[3])-(sigma[1]*sigma[4]))/((m*sigma[3]) - sqr(sigma[1]));
+b := ((m*sigma[4])-(sigma[1]*sigma[2]))/((m*sigma[3]) - sqr(sigma[1]));
+writeln;
+writeln('Nilai dari a = ',a:10:2);
+writeln('Nilai dari b = ',b:10:2);
+readln;
+
+```
