@@ -1,6 +1,10 @@
 # Solusi Praktikum Algoritma dan Pemrograman Modul 6, 2023
 
+berikut adalah solusi untuk modul 6 pada praktikum algoritma dan pemrograman departemen matematika dan sains data Universitas Andalas
+
 ### Solusi No. 1 dan No. 2
+
+#### Bahasa Pemrograman : C++
 ```cpp
 #include <iostream>
 
@@ -97,12 +101,94 @@ int main() {
 }
 ```
 
+#### Bahasa Pemrograman : Pascal
+##### Penjumlahan Matriks
+```pascal
+Program Penjumlahan_Matriks;
+uses crt;
+var a,b,c: array[1..10,1..10] of integer;
+    pilihan,k,l,m,n,p,q,x: integer;
+begin
+   clrscr;
+   write('Input jumlah baris matriks pertama: '); readln(n);
+   write('Input jumlah kolom matriks pertama: '); readln(m);
+   write('Input jumlah baris matriks kedua: ');readln(p);
+   write('Input jumlah kolom matriks kedua: ');readln(q);
+   clrscr;
+   gotoxy(7,1); writeln('========= Matrik A =========');
+   for k:=1 to n do
+     for l:=1 to m do
+     begin
+         gotoxy(8*l+3,k+2); write('A[',k,',',l,'] = '); readln(a[k,l]);
+         gotoxy(8*l+3,k+2); clreol; write(a[k,l]);
+     end;
+   gotoxy(7,8); writeln('========= Matrik B =========');
+   for k:=1 to p do
+     for l:=1 to q do
+     begin
+         gotoxy(8*l+3,k+8); write('B[',k,',',l,'] = '); readln(b[k,l]);
+         gotoxy(8*l+3,k+8); clreol; write(b[k,l]);
+     end;
+   writeln;
+       gotoxy(7,17); writeln('========= Matrik C =========');
+       for k:= 1 to n do
+         for l:= 1 to m do
+           begin
+             c[k,l]:= a[k,l]+b[k,l];
+             gotoxy(8*l+3,k+17); write(c[k,l]);
+           end;
+   readln;
+end.
+```
+
+##### Perkalian Matriks
+```pascal
+Program Perkalian_Matrik;
+uses crt;
+var a,b,c: array[1..10,1..10] of integer;
+    pilihan,k,l,m,n,p,q,x: integer;
+begin
+   clrscr;
+   write('Input jumlah baris matriks pertama: '); readln(n);
+   write('Input jumlah kolom matriks pertama: '); readln(m);
+   write('Input jumlah baris matriks kedua: ');readln(p);
+   write('Input jumlah kolom matriks kedua: ');readln(q);
+   clrscr;
+   gotoxy(7,1); writeln('========= Matrik A =========');
+   for k:=1 to n do
+     for l:=1 to m do
+     begin
+         gotoxy(8*l+3,k+2); write('A[',k,',',l,'] = '); readln(a[k,l]);
+         gotoxy(8*l+3,k+2); clreol; write(a[k,l]);
+     end;
+   gotoxy(7,8); writeln('========= Matrik B =========');
+   for k:=1 to p do
+     for l:=1 to q do
+     begin
+         gotoxy(8*l+3,k+8); write('B[',k,',',l,'] = '); readln(b[k,l]);
+         gotoxy(8*l+3,k+8); clreol; write(b[k,l]);
+     end;
+   writeln;
+       gotoxy(7,17); writeln('========= Matrik C =========');
+       for k:= 1 to n do
+         for l:= 1 to q do
+           begin
+             c[k,l]:=0;
+             for x:=1 to m do
+               c[k,l]:=c[k,l]+(a[k,x]*b[x,l]);
+               gotoxy(8*l+3,k+17); write(c[k,l]);
+           end;
+   readln;
+end.
+```
+
 
 
 
 
 ### solusi No. 3
 
+#### Bahasa Pemrograman : C++
 ```cpp
 #include <iostream>
 
@@ -147,3 +233,5 @@ int main() {
 
 }
 ```
+
+#### Bahasa Pemrograman : Pascal
