@@ -107,13 +107,17 @@ int main() {
 Program Penjumlahan_Matriks;
 uses crt;
 var a,b,c: array[1..10,1..10] of integer;
-    pilihan,k,l,m,n,p,q,x: integer;
+    pilihan,m,n,k,l: integer;
 begin
    clrscr;
-   write('Input jumlah baris matriks pertama: '); readln(n);
-   write('Input jumlah kolom matriks pertama: '); readln(m);
-   write('Input jumlah baris matriks kedua: ');readln(p);
-   write('Input jumlah kolom matriks kedua: ');readln(q);
+   write('Input jumlah baris matriks : ');
+   Repeat
+        gotoxy(32,1); clreol; readln(n);
+   until  (n>0) ;
+   write('Input jumlah kolom matriks : ');
+   Repeat
+        gotoxy(32,2); clreol; readln(m)
+   until  (m>0) ;
    clrscr;
    gotoxy(7,1); writeln('========= Matrik A =========');
    for k:=1 to n do
@@ -123,8 +127,8 @@ begin
          gotoxy(8*l+3,k+2); clreol; write(a[k,l]);
      end;
    gotoxy(7,8); writeln('========= Matrik B =========');
-   for k:=1 to p do
-     for l:=1 to q do
+   for k:=1 to n do
+     for l:=1 to m do
      begin
          gotoxy(8*l+3,k+8); write('B[',k,',',l,'] = '); readln(b[k,l]);
          gotoxy(8*l+3,k+8); clreol; write(b[k,l]);
@@ -143,16 +147,29 @@ end.
 
 ##### Perkalian Matriks (No. 2)
 ```pascal
-Program Perkalian_Matrik;
+Program Perkalian_Matriks;
 uses crt;
 var a,b,c: array[1..10,1..10] of integer;
-    pilihan,k,l,m,n,p,q,x: integer;
+    pilihan,m,n,p,q,k,l,x: integer;
 begin
    clrscr;
-   write('Input jumlah baris matriks pertama: '); readln(n);
-   write('Input jumlah kolom matriks pertama: '); readln(m);
-   write('Input jumlah baris matriks kedua: ');readln(p);
-   write('Input jumlah kolom matriks kedua: ');readln(q);
+   write('Input jumlah baris matriks A : ');
+   Repeat
+        gotoxy(34,1); clreol; readln(n);
+   until  (n>0) ;
+   write('Input jumlah kolom matriks A : ');
+   Repeat
+        gotoxy(34,2); clreol; readln(m)
+   until  (m>0) ;
+   write('Input jumlah baris matriks B : ');
+   Repeat
+        gotoxy(34,3); clreol; readln(p);
+   until  (n>0) and(p=m) ;
+   write('Input jumlah kolom matriks B : ');
+   Repeat
+        gotoxy(34,4); clreol; readln(q)
+   until  (m>0);
+
    clrscr;
    gotoxy(7,1); writeln('========= Matrik A =========');
    for k:=1 to n do
@@ -181,7 +198,6 @@ begin
    readln;
 end.
 ```
-
 
 
 
