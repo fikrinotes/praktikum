@@ -102,7 +102,7 @@ int main() {
 ```
 
 #### Bahasa Pemrograman : Pascal
-##### Penjumlahan Matriks
+##### Penjumlahan Matriks (No. 1)
 ```pascal
 Program Penjumlahan_Matriks;
 uses crt;
@@ -141,7 +141,7 @@ begin
 end.
 ```
 
-##### Perkalian Matriks
+##### Perkalian Matriks (No. 2)
 ```pascal
 Program Perkalian_Matrik;
 uses crt;
