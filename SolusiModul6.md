@@ -48,16 +48,16 @@ int main() {
 	
 
 	/*input matriks m2  */
-	for (int i = 0;i<n; i++ ) {
-		for (int j = 0; j<m; j++) {
+	for (int i = 0;i<u; i++ ) {
+		for (int j = 0; j<v; j++) {
 			cout<< "input elemen array :";
 			cin >> m2[i][j];
 		}
 	}
 	
 	/*cetak matriks m2*/
-	for (int i = 0;i<n; i++ ) {
-		for (int j = 0; j<m; j++) {
+	for (int i = 0;i<u; i++ ) {
+		for (int j = 0; j<v; j++) {
 			cout << m2[i][j] <<  " ";
 		}
 		cout << endl;
