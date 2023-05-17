@@ -5,7 +5,7 @@ berikut adalah solusi untuk modul 6 pada praktikum algoritma dan pemrograman dep
 ### Solusi No. 1 dan No. 2
 
 #### Bahasa Pemrograman : C++ 
-#### Penjumlahan matriks (No. 1)
+##### Penjumlahan matriks (No. 1)
 ```cpp
 #include <iostream>
 
