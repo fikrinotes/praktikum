@@ -108,7 +108,6 @@ int main() {
 
 	int  m1[n][m];
 	int m2[u][v];
-	int hasil[n][m];
 	int hasilkali[n][m];
 	
 
