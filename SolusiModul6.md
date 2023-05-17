@@ -81,8 +81,8 @@ int main() {
 
 	/* hitung hasil kali m1*m2 */
 	cout << "Hasil Kali : "<<endl;
-	for (int i = 0;i<n; i++ ) {
-		for (int j = 0; j<m; j++) {
+	for (int i = 0; i<n; i++ ) {
+		for (int j = 0; j<v; j++) {
 			hasilkali[i][j] = 0;
 			for (int k = 0; k < m; k++) {
 				hasilkali[i][j] += m1[i][k] *  m2[k][j];
@@ -92,7 +92,7 @@ int main() {
 
 	/*tampilkan hasil perkalian matriks*/
 	for (int i = 0;i<n; i++ ) {
-		for (int j = 0; j<m; j++) {
+		for (int j = 0; j<v; j++) {
 			cout << hasilkali[i][j] <<  " ";
 		}
 		cout << endl;
