@@ -4,8 +4,85 @@ berikut adalah solusi untuk modul 6 pada praktikum algoritma dan pemrograman dep
 
 ### Solusi No. 1 dan No. 2
 
-#### Bahasa Pemrograman : C++
+#### Bahasa Pemrograman : C++ no 1
 ```cpp
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int n, m;
+
+	cout << "input jumlah baris matriks : ";
+	cin >> n;
+	cout << "input jumlah kolom matriks : ";
+	cin >> m;
+
+	int A[n][m];
+	int B[n][m];
+	int hasil[n][m];
+	int hasilkali[n][m];
+
+
+	/*input elemen matriks A  */
+	for (int i = 1;i<=n; i++ ) {
+		for (int j = 1; j<=m; j++) {
+			cout<< "A["<<i<<","<<j<<"] :";
+			cin >> A[i][j];
+		}
+	}
+
+
+	/*cetak matriks*/
+	
+	cout<< "~ Matriks A ~"<<endl;
+	for (int i = 1;i<=n; i++ ) {
+		for (int j = 1; j<=m; j++) {
+			cout << A[i][j] <<  " ";
+		}
+		cout << endl;
+	}
+
+
+	/*input elemen matriks B  */
+	for (int i = 1;i<=n; i++ ) {
+		for (int j = 1; j<=m; j++) {
+			cout<< "B["<<i<<","<<j<<"] :";
+			cin >> B[i][j];
+		}
+	}
+
+
+	/*cetak matriks*/
+        cout << "~ Matriks B ~"<<endl;
+	for (int i = 1;i<=n; i++ ) {
+		for (int j = 1; j<=m; j++) {
+			cout << B[i][j] <<  " ";
+		}
+		cout << endl;
+	}
+
+	/*hitung penjumlahan matriks A + B*/
+	for (int i = 1;i<=n; i++ ) {
+		for (int j = 1; j<=m; j++) {
+			hasil[i][j] = A[i][j] + B[i][j];
+		}
+	}
+
+	/*tampilkan hasil penjumlahan*/
+	cout << "Hasil Penjumlahan : " << endl;
+	for (int i = 1;i<=n; i++ ) {
+		for (int j = 1; j<=m; j++) {
+			cout << hasil[i][j] <<  " ";
+		}
+		cout << endl;
+	}
+
+}
+```
+
+#### Bahasa Pemrograman : C++ No. 2
+```pascal
 #include <iostream>
 
 using namespace std;
@@ -18,10 +95,15 @@ int main() {
 	cout << "input jumlah kolom matriks pertama : ";
 	cin >> m;
 
+	
+	do {
 	cout << "input jumlah baris matriks kedua : ";
 	cin >> u;
+	} while (m != u);
+
 	cout << "input jumlah kolom matriks kedua : ";
 	cin >> v;
+
 
 	int  m1[n][m];
 	int m2[u][v];
@@ -63,26 +145,10 @@ int main() {
 		cout << endl;
 	}
 	
-	/*hitung penjumlahan matriks m1 + m2*/
-	for (int i = 0;i<n; i++ ) {
-		for (int j = 0; j<m; j++) {
-			hasil[i][j] = m1[i][j] + m2[i][j];
-		}
-	}
-
-	/*tampilkan hasil penjumlahan*/
-	cout << "Hasil Penjumlahan : " << endl;
-	for (int i = 0;i<n; i++ ) {
-		for (int j = 0; j<m; j++) {
-			cout << hasil[i][j] <<  " ";
-		}
-		cout << endl;
-	}
-
 	/* hitung hasil kali m1*m2 */
 	cout << "Hasil Kali : "<<endl;
-	for (int i = 0; i<n; i++ ) {
-		for (int j = 0; j<v; j++) {
+	for (int i = 0;i<n; i++ ) {
+		for (int j = 0; j<m; j++) {
 			hasilkali[i][j] = 0;
 			for (int k = 0; k < m; k++) {
 				hasilkali[i][j] += m1[i][k] *  m2[k][j];
@@ -92,7 +158,7 @@ int main() {
 
 	/*tampilkan hasil perkalian matriks*/
 	for (int i = 0;i<n; i++ ) {
-		for (int j = 0; j<v; j++) {
+		for (int j = 0; j<m; j++) {
 			cout << hasilkali[i][j] <<  " ";
 		}
 		cout << endl;
