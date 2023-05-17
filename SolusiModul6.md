@@ -292,5 +292,5 @@ writeln;
 writeln('Nilai dari a = ',a:10:2);
 writeln('Nilai dari b = ',b:10:2);
 readln;
-
+end.
 ```
