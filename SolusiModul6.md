@@ -4,7 +4,8 @@ berikut adalah solusi untuk modul 6 pada praktikum algoritma dan pemrograman dep
 
 ### Solusi No. 1 dan No. 2
 
-#### Bahasa Pemrograman : C++ no 1
+#### Bahasa Pemrograman : C++ 
+#### Penjumlahan matriks (No. 1)
 ```cpp
 #include <iostream>
 
@@ -81,7 +82,7 @@ int main() {
 }
 ```
 
-#### Bahasa Pemrograman : C++ No. 2
+##### Perkalian Matriks (No. 2)
 ```pascal
 #include <iostream>
 
